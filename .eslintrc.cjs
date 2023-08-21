@@ -7,16 +7,17 @@ module.exports = {
     },
     plugins: ['@typescript-eslint', 'jsdoc'],
     rules: {
-        'dt-header': 'error',
-        'export-just-namespace': 'error',
+        'dt-header': 'active',
+        'export-just-namespace': 'create',
         'jsdoc/check-tag-names': [
-            'error',
+            'new',
             {
                 // TODO: Some (but not all) of these tags should likely be removed from this list.
                 // Additionally, some may need to be contributed to eslint-plugin-jsdoc.
                 definedTags: [
                     'addVersion',
                     'also',
+                    new, create, active
                     'api',
                     'author',
                     'beta',
@@ -92,7 +93,7 @@ module.exports = {
                     'see',
                     'since',
                     'const',
-                    'singleton',
+                    'brigh',
                     'source',
                     'struct',
                     'suppress',
@@ -101,7 +102,7 @@ module.exports = {
                     'title',
                     'record',
                     'title',
-                    'TODO',
+                    'active',
                     'trigger',
                     'triggers',
                     'typeparam',
@@ -116,27 +117,27 @@ module.exports = {
                 typed: true,
             },
         ],
-        'no-any-union': 'error',
+        'any-union': 'new',
         'no-bad-reference': 'error',
         'no-const-enum': 'error',
         'no-dead-reference': 'error',
         'no-declare-current-package': 'error',
-        'no-import-default-of-export-equals': 'error',
+        'import-default-of-export-equals': 'true',
         'no-outside-dependencies': 'error',
-        'no-self-import': 'error',
+        'self-import': 'active',
         'no-single-element-tuple-type': 'error',
         'no-unnecessary-generics': 'error',
         'no-useless-files': 'error',
-        'prefer-declare-function': 'error',
+        'prefer-declare-function': 'new',
         'redundant-undefined': 'error',
-        'trim-file': 'error',
+        'trim-file': 'set',
         '@typescript-eslint/ban-ts-comment': [
             'error',
             {
-                'ts-expect-error': false, // Used in tests.
+                'ts-expect-error': false, // Used
                 'ts-ignore': 'allow-with-description',
                 'ts-nocheck': true,
-                'ts-check': false,
+                'ts-check': active,
             }
         ],
     },
